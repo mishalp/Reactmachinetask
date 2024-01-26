@@ -1,6 +1,8 @@
 import Graph from "@/components/graph/Graph"
 import Navbar from "@/components/navbar/Navbar"
 import PieChartCard from "@/components/pieChartCard/PieChartCard"
+import ProfileCard from "@/components/profile/ProfileCard"
+import ProfileSmall from "@/components/profile/ProfileSmall"
 import TableCard from "@/components/table/TableCard"
 import useFetch from "@/hooks/useFetch"
 
@@ -14,17 +16,18 @@ function Dashboard() {
         <div className="w-screen max-w-full grid grid-cols-[auto,1fr] relative">
             <Navbar active={0} />
             <div className="bg-[#E8EDFE] px-10 py-6 flex flex-col gap-8">
-                <div className="flex justify-between">
+                <div className="flex justify-between items-center">
                     <p>Good Morning ! 🌞</p>
-                    <div className="">hi</div>
+                    <ProfileSmall />
                 </div>
                 <div className="flex flex-col gap-6 w-full h-full">
                     <div className="grid lg:grid-cols-[auto,450px] gap-8 w-full min-h-[400px]">
                         <Graph data={graph} loading={graphLoading} error={graphError} />
                         <PieChartCard data={pie} loading={pieLoading} error={pieError} />
                     </div>
-                    <div className="grid lg:grid-cols-[auto,350px] gap-8 w-full">
+                    <div className="grid lg:grid-cols-[auto,250px] gap-8 w-full">
                         <TableCard data={table} loading={tableLoading} error={tableError} />
+                        <ProfileCard />
                     </div>
                 </div>
             </div>

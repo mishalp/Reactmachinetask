@@ -22,8 +22,8 @@ import {
 function TableCard({ data, loading, error }) {
     if (loading) return <p>Loading</p>
     return (
-        <div className="flex flex-col gap-4">
-            <div className="shadow-md rounded-md overflow-hidden">
+        <div className="flex flex-col gap-8">
+            <div className="shadow-md rounded-lg overflow-hidden">
                 < Table className="bg-white " >
                     <TableHeader>
                         <TableRow >

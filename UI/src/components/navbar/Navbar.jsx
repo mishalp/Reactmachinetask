@@ -4,6 +4,7 @@ import support from '@/assets/images/Support.png'
 import puzzle from '@/assets/images/Puzzle.png'
 import help from '@/assets/images/Help.png'
 import off from '@/assets/images/Shutdown.png'
+import stat from '@/assets/images/StatBoard.png'
 import { Link } from 'react-router-dom'
 
 const links = [
@@ -34,7 +35,8 @@ function Navbar({ active }) {
         <div className="min-w-[15rem] bg-[#20263A] h-screen overflow-auto grid grid-rows-3 sticky top-0 left-0">
             <div className="flex flex-col gap-1 mx-auto my-8 items-center">
                 <img src={briefcase} className='w-20 h-auto' alt="" />
-                <h2 className='font-mono text-[#CBCBCB] font-bold text-xl'>STATEBOARD</h2>
+                {/* <h2 className='font-mono text-[#CBCBCB] font-bold text-xl'>STATEBOARD</h2> */}
+                <img src={stat} alt="" />
             </div>
             <div className="flex flex-col ml-8 gap-6">
                 {links.map((item, i) => (
