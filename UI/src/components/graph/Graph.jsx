@@ -4,15 +4,17 @@ import { Skeleton } from "../ui/skeleton"
 function Graph({ data, error, loading }) {
     if (loading) return <GraphSkelton />
     return (
-        <ResponsiveContainer width="100%" height="100%">
-            <LineChart width={600} height={400} data={data} className="bg-white pr-8 rounded-lg w-full shadow-md">
-                <Line type="monotone" dataKey="y" stroke="#8884d8" />
-                <CartesianGrid stroke="#ccc" />
-                <XAxis dataKey="x" />
-                <YAxis />
-                <Tooltip />
-            </LineChart>
-        </ResponsiveContainer>
+        <div className="flex min-h-[300px]">
+            <ResponsiveContainer width="100%" height="100%">
+                <LineChart width={600} height={400} data={data} className="bg-white pr-8 rounded-lg w-full shadow-md">
+                    <Line type="monotone" dataKey="y" stroke="#8884d8" />
+                    <CartesianGrid stroke="#ccc" />
+                    <XAxis dataKey="x" />
+                    <YAxis />
+                    <Tooltip />
+                </LineChart>
+            </ResponsiveContainer>
+        </div>
     )
 }
 

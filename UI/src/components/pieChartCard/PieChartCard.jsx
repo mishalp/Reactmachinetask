@@ -6,7 +6,7 @@ function PieChartCard({ data, loading, error }) {
     if (loading) return <p>Loading</p>
     return (
         <div className="bg-white rounded-md shadow-md py-4 flex flex-col">
-            <div className="w-full h-full">
+            <div className="w-full h-full min-h-[170px]">
                 <ResponsiveContainer width="100%" height="100%">
                     <PieChart width={300} height={300}>
                         <Pie
