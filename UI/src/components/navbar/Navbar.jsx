@@ -31,7 +31,7 @@ const links = [
 
 function Navbar({ active }) {
     return (
-        <div className="min-w-[15rem] bg-[#20263A] h-screen grid grid-rows-3">
+        <div className="min-w-[15rem] bg-[#20263A] h-screen overflow-auto grid grid-rows-3 sticky top-0 left-0">
             <div className="flex flex-col gap-1 mx-auto my-8 items-center">
                 <img src={briefcase} className='w-20 h-auto' alt="" />
                 <h2 className='font-mono text-[#CBCBCB] font-bold text-xl'>STATEBOARD</h2>
