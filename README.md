@@ -1,4 +1,5 @@
 # Reactmachinetask - Statboard
+![Screenshot from 2024-01-26 18-21-25](https://github.com/mishalp/Reactmachinetask/assets/72297945/97e03480-a5f2-4b2a-afaf-42d029853f07)
 
 ## Getting Started
 
