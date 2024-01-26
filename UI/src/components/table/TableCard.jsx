@@ -16,11 +16,12 @@ import {
     PaginationNext,
     PaginationPrevious,
 } from "@/components/ui/pagination"
+import { Skeleton } from "../ui/skeleton"
 
 
 
 function TableCard({ data, loading, error }) {
-    if (loading) return <p>Loading</p>
+    if (loading) return <TableSkelton />
     return (
         <div className="flex flex-col gap-8 overflow-auto w-full">
             <div className="shadow-md rounded-lg overflow-hidden">
@@ -74,6 +75,17 @@ function TableCard({ data, loading, error }) {
 
         </div >
     )
+}
+
+function TableSkelton() {
+    return <div className="flex flex-col overflow-auto w-full bg-white shadow-md rounded-lg relative">
+        <div className="">
+            <Skeleton className="border-b-2 w-full h-[100px] rounded-none" />
+            <Skeleton className="border-b-2 w-full h-[100px] rounded-none" />
+            <Skeleton className="border-b-2 w-full h-[100px] rounded-none" />
+            <Skeleton className="border-b-2 w-full h-[100px] rounded-none" />
+        </div>
+    </div>
 }
 
 export default TableCard

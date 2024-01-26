@@ -1,9 +1,10 @@
 import { Cell, Pie, PieChart, ResponsiveContainer } from "recharts"
+import { Skeleton } from "../ui/skeleton";
 
 const COLORS = ['#6BC587', '#88D1A1', '#A9DEBA', '#C9EAD4', '#EAF6ED'];
 
 function PieChartCard({ data, loading, error }) {
-    if (loading) return <p>Loading</p>
+    if (loading) return <PieSkelton />
     return (
         <div className="bg-white rounded-md shadow-md py-4 flex flex-col">
             <div className="w-full h-full min-h-[170px]">
@@ -36,6 +37,20 @@ function PieChartCard({ data, loading, error }) {
             </div>
         </div>
     )
+}
+
+function PieSkelton() {
+    return <div className="bg-white rounded-md shadow-md p-2 flex flex-col">
+        <div className="w-full h-full min-h-[140px] px-8 flex items-center justify-center">
+            <Skeleton className="h-[170px] w-[170px]  rounded-full" />
+        </div>
+        <div className="p-4 flex flex-col gap-4">
+            <Skeleton className="w-[70%] h-[20px]" />
+            <Skeleton className="w-[90%] h-[20px]" />
+            <Skeleton className="w-[100%] h-[20px]" />
+            <Skeleton className="w-[80%] h-[20px]" />
+        </div>
+    </div>
 }
 
 export default PieChartCard
